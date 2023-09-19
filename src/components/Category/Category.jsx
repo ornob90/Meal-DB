@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Category = ({ mealData, setCurCategory }) => {
   return (
@@ -8,9 +8,18 @@ const Category = ({ mealData, setCurCategory }) => {
         <div
           key={idCategory}
           onClick={() => setCurCategory(strCategory)}
-          className="bg-rose-600 px-4 py-1 rounded-lg"
+          className=""
         >
-          <Link to={`/meals/${strCategory}`}>{strCategory}</Link>
+          <NavLink
+            to={`/meals/${strCategory}`}
+            className={({ isActive }) =>
+              `font-bold px-4 py-1 rounded-lg ${
+                isActive ? "bg-white text-black" : "bg-rose-600 text-white"
+              }`
+            }
+          >
+            {strCategory}
+          </NavLink>
         </div>
       ))}
     </div>
