@@ -22,7 +22,7 @@ const MealList = () => {
           {meals.meals.map(({ idMeal, strMeal, strMealThumb }, idx) => (
             <div
               key={idMeal}
-              className="flex flex-col  justify-between rounded-lg border p-2 border-white h-[400px]"
+              className="flex flex-col justify-between pb-4 rounded-lg border p-2 border-white h-[400px]"
             >
               <div className="w-full h-[200px]">
                 <img
