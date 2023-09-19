@@ -37,7 +37,7 @@ const MealList = () => {
               <div>
                 <Link
                   className="px-4 py-2 text-sm rounded-lg bg-rose-600"
-                  to={`/meals/${idMeal}`}
+                  to={`/meal/${idMeal}`}
                 >
                   Show Details
                 </Link>
